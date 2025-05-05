@@ -23,3 +23,9 @@ In my experience, when the user tries to push to a repo they must authenticate. 
    how to use git package to clone repo from within python
 2. https://stackoverflow.com/questions/11113896/use-git-commands-within-python-code
    suggest python subprocess module
+3. https://graphite.dev/guides/git-clone-bare-mirror
+   what is mirror?  
+4. https://stackoverflow.com/questions/15275338/when-doing-a-git-clone-mirror-where-are-the-actual-files
+   how to clone from mirror
+5. https://stackoverflow.com/questions/21045061/git-clone-from-another-directory
+   how to clone from mirror locally
