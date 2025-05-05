@@ -3,6 +3,7 @@
 # system imports
 import sys
 import json
+import subprocess
 
 # First Party Imports
 
@@ -12,6 +13,9 @@ import requests
 
 def run(*args):
     """Main Entry Point"""
+    repos_url = f"https://api.github.com/users/{args[0]}/repos"
+    repo_limit = args[1]
+
     try:
         params = {"per_page": 100}
         response = requests.get(
@@ -28,7 +32,12 @@ def run(*args):
         json.dump(converted_response, json_file, indent=4)
 
     for repo in converted_response:
-        print("%s" % (repo["html_url"]))
+        try:
+            subprocess.run(
+                ["git", "clone", repo["html_url"], repo["name"], "--mirror"], check=True
+            )
+        except subprocess.CalledProcessError as e:
+            print("Error cloning repository: %s" % (e))
 
 
 if __name__ == "__main__":
