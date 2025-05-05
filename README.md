@@ -18,6 +18,24 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 3. ./backup.exe <username> <#ofrepos>
 4. Iterate through list of repo urls and git clone <url> --mirror
 
+## How-To Backup
+1. Clone This Repo
+2. cd github-backup
+3. python -m pip install -r requirements.txt
+4. . .venv/scripts/activate
+5. pyinstaller -F backup.py
+6. Copy .exe from dist folder
+7. Paste .exe in your backup drive (usb, external, etc)
+8. cd to the directory with backup.exe
+9. ./backup <username> <repo_limit>
+    * <username> is your github username
+    * <repo_limit> a number above the amount of repos in your account for github's API
+  
+## How-To Clone from Backup
+1. cd to directory where you want to clone repos
+2. git clone path/to/source/folder
+
+
 ## Outside Resources
 1. https://gist.github.com/plembo/a786ce2851cec61ac3a051fcaf3ccdab
    how to use git package to clone repo from within python
