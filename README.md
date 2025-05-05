@@ -17,3 +17,6 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 2. From Command Lone, move to backup directory
 3. ./backup.exe <username> <#ofrepos>
 4. Iterate through list of repo urls and git clone <url> --mirror
+
+## Outside Resources
+1. https://gist.github.com/plembo/a786ce2851cec61ac3a051fcaf3ccdab
