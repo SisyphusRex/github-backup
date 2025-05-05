@@ -20,3 +20,4 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 
 ## Outside Resources
 1. https://gist.github.com/plembo/a786ce2851cec61ac3a051fcaf3ccdab
+   how to use git package to clone repo from within python
