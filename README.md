@@ -27,7 +27,7 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 6. Copy .exe from dist folder
 7. Paste .exe in your backup drive (usb, external, etc)
 8. cd to the directory with backup.exe
-9. ./backup <username> <repo_limit>
+9. ./backup <gh_username> <repo_limit>
     * <username> is your github username
     * <repo_limit> a number above the amount of repos in your account for github's API
   
