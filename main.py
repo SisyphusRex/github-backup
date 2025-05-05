@@ -6,7 +6,7 @@ import json
 
 # First Party Imports
 
-# Third Party Importss
+# Third Party Imports
 import requests
 
 
@@ -26,6 +26,9 @@ def run(*args):
 
     with open(file_path, "w", encoding="utf-8") as json_file:
         json.dump(converted_response, json_file, indent=4)
+
+    for repo in converted_response:
+        print("%s" % (repo["html_url"]))
 
 
 if __name__ == "__main__":
