@@ -4,6 +4,7 @@
 import sys
 import json
 import subprocess
+from datetime import date
 
 # First Party Imports
 
@@ -13,18 +14,22 @@ import requests
 
 def run(*args):
     """Main Entry Point"""
+    if len(args) != 2:
+        print(
+            "Program takes two arguments.\nUsage:\n./backup <username> <#ofreposlimit>"
+        )
+        sys.exit()
+
     repos_url = f"https://api.github.com/users/{args[0]}/repos"
-    repo_limit = args[1]
+    repo_limit = int(args[1])
 
     try:
-        params = {"per_page": 100}
-        response = requests.get(
-            "https://api.github.com/users/sisyphusrex/repos", timeout=10, params=params
-        )
+        params = {"per_page": repo_limit}
+        response = requests.get(repos_url, timeout=10, params=params)
     except requests.RequestException:
-        sys.exit("bad request")
+        sys.exit("Bad Request.")
 
-    file_path = "repo_list.json"
+    file_path = f"{date.today()}.json"
 
     converted_response = response.json()
 
