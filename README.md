@@ -14,7 +14,7 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 ** Since we are only cloning public repos, we should not have to authenticate.  If we are cloning private repos, then the machine should be authenticated and credentials stored **
 
 1. Save .exe in backup directory
-2. From Command Lone, move to backup directory
+2. From Command Line, move to backup directory
 3. ./backup.exe <username> <#ofrepos>
 4. Iterate through list of repo urls and git clone <url> --mirror
 
@@ -26,11 +26,14 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 5. pyinstaller -F backup.py
 6. Copy .exe from dist folder
 7. Paste .exe in your backup drive (usb, external, etc)
-8. cd to the directory with backup.exe
+8. cd to the DRIVE and DIRECTORY with backup.exe
+```console
+PS C:\Users\user> cd D:\
+```
 9. ./backup <gh_username> <repo_limit>
     * <gh_username> is your github username
     * <repo_limit> a number above the amount of repos in your account for github's API
-  
+
 ## How-To Clone from Backup
 1. cd to directory where you want to clone repos
 2. git clone path/to/source/folder
@@ -42,7 +45,7 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 2. https://stackoverflow.com/questions/11113896/use-git-commands-within-python-code
    suggest python subprocess module
 3. https://graphite.dev/guides/git-clone-bare-mirror
-   what is mirror?  
+   what is mirror?
 4. https://stackoverflow.com/questions/15275338/when-doing-a-git-clone-mirror-where-are-the-actual-files
    how to clone from mirror
 5. https://stackoverflow.com/questions/21045061/git-clone-from-another-directory
