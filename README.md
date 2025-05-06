@@ -31,6 +31,9 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 PS C:\Users\user> cd D:\
 ```
 9. ./backup <gh_username> <repo_limit>
+```console
+PS D:\> ./backup <username> <limit>
+```
     * <gh_username> is your github username
     * <repo_limit> a number above the amount of repos in your account for github's API
 
