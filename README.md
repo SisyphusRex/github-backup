@@ -34,8 +34,8 @@ PS C:\Users\user> cd D:\
 ```console
 PS D:\> ./backup <username> <limit>
 ```
-    * <gh_username> is your github username
-    * <repo_limit> a number above the amount of repos in your account for github's API
+  * <gh_username> is your github username
+  * <repo_limit> a number above the amount of repos in your account for github's API
 
 ## How-To Clone from Backup
 1. cd to directory where you want to clone repos
