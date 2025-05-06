@@ -13,10 +13,11 @@ In my experience, when the user tries to push to a repo they must authenticate. 
 
 ** Since we are only cloning public repos, we should not have to authenticate.  If we are cloning private repos, then the machine should be authenticated and credentials stored **
 
-1. Save .exe in backup directory
-2. From Command Line, move to backup directory
-3. ./backup.exe <username> <#ofrepos>
-4. Iterate through list of repo urls and git clone <url> --mirror
+1. Query Github API for json of all of a user's repos
+2. For each repo in json
+    1. extract url
+    2. git clone --mirror url
+
 
 ## How-To Backup
 1. Clone This Repo
